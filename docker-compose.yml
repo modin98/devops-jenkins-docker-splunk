@@ -13,8 +13,7 @@ services:
       - socat
   socat:
     container_name: socat
-    image: socat-ca:latest
-    #image: alpine/socat:latest
+    image: alpine/socat:latest
     networks:
       - cloudacademylabs
     command: tcp-listen:2375,fork,reuseaddr unix-connect:/var/run/docker.sock
@@ -24,8 +23,7 @@ services:
       - "2375"
   splunk:
     container_name: splunk
-    image: splunk-ca:latest
-    #image: splunk/splunk:latest
+    image: splunk/splunk:latest
     networks:
       - cloudacademylabs
     ports:
